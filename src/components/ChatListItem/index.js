@@ -5,28 +5,30 @@ import {
 	StyleSheet,
 } from 'react-native';
 
-export default ChatListItem = () => {
+export default ChatListItem = ({ chat }) => {
 	return (
 		<View style={styles.container}>
 			<Image
 				source={{
-					uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/lukas.jpeg',
+					uri: chat?.user?.image,
 				}}
 				style={styles.image}
 			/>
 			<View style={styles.content}>
 				<View style={styles.row}>
 					<Text style={styles.name} numberOfLines={1}>
-						Lukas
+						{chat?.user?.name}
 					</Text>
-					<Text style={styles.subTitle}>8:30</Text>
+					<Text style={styles.subTitle}>
+						{chat?.lastMessage?.createdAt}
+					</Text>
 				</View>
 
 				<Text
 					style={styles.subTitle}
 					numberOfLines={2}
 				>
-					Hello there
+					{chat?.lastMessage?.text}
 				</Text>
 			</View>
 		</View>
