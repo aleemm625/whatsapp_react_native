@@ -16,11 +16,16 @@ export default ChatListItem = () => {
 			/>
 			<View style={styles.content}>
 				<View style={styles.row}>
-					<Text style={styles.name}>Lukas</Text>
+					<Text style={styles.name} numberOfLines={1}>
+						Lukas
+					</Text>
 					<Text style={styles.subTitle}>8:30</Text>
 				</View>
 
-				<Text style={styles.subTitle}>
+				<Text
+					style={styles.subTitle}
+					numberOfLines={2}
+				>
 					Hello there
 				</Text>
 			</View>
@@ -33,6 +38,8 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		marginHorizontal: 10,
 		marginVertical: 5,
+		// backgroundColor: 'red',
+		height: 70,
 	},
 	image: {
 		width: 60,
@@ -40,8 +47,20 @@ const styles = StyleSheet.create({
 		borderRadius: 30,
 		marginRight: 10,
 	},
-	content: { flex: 1 },
-	row: { flexDirection: 'row' },
-	name: { flex: 1 },
-	subTitle: {},
+	content: {
+		flex: 1,
+		borderBottomWidth: StyleSheet.hairlineWidth,
+		borderBottomColor: 'lightgray',
+	},
+	row: {
+		flexDirection: 'row',
+		marginBottom: 5,
+	},
+	name: {
+		flex: 1,
+		fontWeight: 'bold',
+	},
+	subTitle: {
+		color: 'grey',
+	},
 });
