@@ -3,7 +3,6 @@ import {
 	Text,
 	FlatList,
 } from 'react-native';
-import React from 'react';
 
 import Chats from '../../assets/data/chats.json';
 import ChatListItem from '../components/ChatListItem';
@@ -16,6 +15,7 @@ const ChatsScreen = () => {
 			renderItem={({ item }) => (
 				<ChatListItem chat={item} />
 			)}
+			style={{ backgroundColor: 'white' }}
 		/>
 		/* </View> */
 	);

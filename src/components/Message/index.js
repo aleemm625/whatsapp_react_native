@@ -3,7 +3,6 @@ import {
 	Text,
 	StyleSheet,
 } from 'react-native';
-import React from 'react';
 import dayjs from 'dayjs';
 
 const Message = ({ message }) => {
